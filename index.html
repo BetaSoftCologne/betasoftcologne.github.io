@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>BetaSoftCologne</title>
+  </head>
+
+<body>
+    <!-- no nav
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+--> 
+
+<style type="text/css">
+#pic {
+    z-index: -10;
+    width: 1000px;
+    height: 320px;
+}   
+#container {
+  position: relative;
+}
+#container canvas, #overlay {
+  position: absolute;
+}
+.container {
+    width: 100%;
+    opacity: 0.99;
+}
+.jumbotron {
+    background-color: #000080;
+    color: #ffff00;
+}
+</style>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container" class="inverse">
+      <div id="container">
+          <canvas id="pic"></canvas>
+      </div>
+      <h1 class="display-3">Welcome</h1>
+      <p>
+        to the world of BSC, stranger from the interwebs.
+      </p>
+      <p>
+        This site is just a tiny collection of links to other sites where you can find mostly music related
+        stuff that I have made over a period of almost 30 years. Most of the things also touch upon the 
+        Amstrad CPC in some way, my first real home computer and the one where I learnt things like reverse
+        engineering and breaking things (sometimes called cracking), programming in assembly language (sometimes 
+        called coding), making computer music (sometimes called chiptunes) and much more. A wonderful time!
+      </p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">TODO wohin? &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      
+      <div class="col-md-4">
+        <h2>AYAY Kaeppttn!</h2>
+        <p>
+            A SID engine and basic tracker which I have started in 2012. It is capable of
+            creating the classic SID-effect introduced on the Atari ST in the 90s. It can
+            play an AY tune together with one SID voice to get a lot of nice effects.
+        </p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://github.com/BetaSoftCologne/AYAY" role="button">Go &raquo;</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Soundtrakker</h2>
+        <p>
+            A tracker for the Amstrad CPC. Written and released in the early 90s, it was for some years the most
+            popular tracker in the CPC demoscene and was used by almost every group at that time. 
+        </p>
+        <p><a class="btn btn-secondary" target="_blank" href="http://www.cpcwiki.eu/index.php/Soundtrakker" role="button">Go &raquo;</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>AY³ aka AYcubed</h2>
+        <p>
+            A new SID engine which emulates some parts of the SID sound and more:
+            <ul>
+                <li>3 independent voices</li>
+                <li>multiple wave forms</li>
+                <li>digi drums</li>
+            </ul>              
+        </p>
+        <!-- TODO don't alert (freezes the js interpreter) -->
+        <p><a class="btn btn-secondary" href="javascript:alert('AY³ is not yet ready');" role="button">- WIP -</a></p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <h2>@SoundCloud</h2>
+        <p>
+            Some of the tunes I made between 1990 and now. Using <a target="_blank" 
+            href="https://en.wikipedia.org/wiki/FastTracker_2">Fasttracker 2</a>, Soundtrakker, AYAY Kaepttn!, LMMS, Garageband and AYcubed.
+        </p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://soundcloud.com/carl-carbunckel/" role="button">Go &raquo;</a></p>
+      </div>
+      
+      <div class="col-md-4">
+        <h2>@SceneStream</h2>
+        <p>
+            A slightly larger mix of tunes, mostly from the CPC, but also some Fasttracker 2 modules.
+        </p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://scenestream.net/demovibes/artist/1862/" role="button">Go &raquo;</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>@Roland Radio</h2>
+        <p>
+            A collection of Soundtrakker tunes that I made in the 90s. Mostly covers and conversions from more or less well-known
+            tunes from the C64, Amiga or SNES.
+        </p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://rolandradio.net/artists-at-roland-radio/bsc-betasoft-cologne/" role="button">Go &raquo;</a></p>
+      </div>
+
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p>&copy; BSC 1987-<span id="year">2019</span></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  </body>
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+$("#year").text(1900 + new Date().getYear());
+</script>
+
+</html>
