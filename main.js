@@ -19,12 +19,12 @@ function draw(c, h) {
   for (let i=0; i<c.length;i++) {
     let y = h*i; // + r + r * Math.sin(ii);
     ctx.fillStyle = colors[c[i]];
-    ctx.fillRect(0,y,100,y+h);
+    ctx.fillRect(0,y,1024,y+h);
   }
 }
 
 // draw bar
-var mid = 80, amp = 80;
+var mid = 60, amp = mid;
 function bar(target, cols, c, f) {
   var t = [], x = 0;
   for (var y of cols) {

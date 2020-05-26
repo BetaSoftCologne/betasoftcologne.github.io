@@ -50,22 +50,28 @@
 <style type="text/css">
 #pic {
     z-index: -10;
-    width: 1000px;
-    height: 320px;
+    width: 100%;
+    height: 360px;
 }   
 #container {
   position: relative;
 }
-#container canvas, #overlay {
+#container canvas {
   position: absolute;
 }
 .container {
     width: 100%;
     opacity: 0.99;
 }
+.container > p {
+  padding: 0.5em;
+}
 .jumbotron {
     background-color: #000080;
     color: #ffff00;
+}
+.display-3 {
+  padding: 0.1em;
 }
 </style>
 
@@ -77,18 +83,24 @@
       <div id="container">
           <canvas id="pic"></canvas>
       </div>
-      <h1 class="display-3">Welcome</h1>
+      <h1 class="display-3">Welcome ..</h1>
       <p>
-        to the world of BSC, stranger from the interwebs.
+        .. to the world of BSC, stranger from the interwebs!
       </p>
       <p>
-        This site is just a tiny collection of links to other sites where you can find mostly music related
-        stuff that I have made over a period of almost 30 years. Most of the things also touch upon the 
-        Amstrad CPC in some way, my first real home computer and the one where I learnt things like reverse
+        This site is just a tiny collection of links to other sites covering music related
+        stuff that I have made over a period of almost 30 years. 
+        Most of the things also mostly relate to the 
+        Amstrad CPC, my 2nd home computer after the Speccy. The CPC was my main machine between 1985 and 1993 and I learnt things like reverse
         engineering and breaking things (sometimes called cracking), programming in assembly language (sometimes 
-        called coding), making computer music (sometimes called chiptunes) and much more. A wonderful time!
+        called coding), making special computer music (sometimes called chiptunes) and much more. Ahhh, wonderful times!
       </p>
+      <p>
+        Ready
+      </p>
+      <!--
       <p><a class="btn btn-primary btn-lg" href="#" role="button">TODO wohin? &raquo;</a></p>
+      -->
     </div>
   </div>
 
@@ -99,7 +111,7 @@
       <div class="col-md-4">
         <h2>AYAY Kaeppttn!</h2>
         <p>
-            A SID engine and basic tracker which I have started in 2012. It is capable of
+            A SID engine and basic tracker which I started in 2012. It is capable of
             creating the classic SID-effect introduced on the Atari ST in the 90s. It can
             play an AY tune together with one SID voice to get a lot of nice effects.
         </p>
@@ -118,11 +130,12 @@
       <div class="col-md-4">
         <h2>AY³ aka AYcubed</h2>
         <p>
-            A new SID engine which emulates some parts of the SID sound and more:
+            A new SID engine which emulates some parts of the SID sound like:
             <ul>
                 <li>3 independent voices</li>
-                <li>multiple wave forms</li>
-                <li>digi drums</li>
+                <li>synthesized square and sawtooth wave forms</li>
+                <li>variable duty cycle on square waves</li>
+                <li>Stereo!</li>
             </ul>              
         </p>
         <!-- TODO don't alert (freezes the js interpreter) -->
@@ -155,10 +168,10 @@
       <div class="col-md-4">
         <h2>@Roland Radio</h2>
         <p>
-            A collection of Soundtrakker tunes that I made in the 90s. Mostly covers and conversions from more or less well-known
-            tunes from the C64, Amiga or SNES.
+          "Your Amstrad CPC Chiptune Radio". There you'll find a collection of Soundtrakker tunes, mostly covers and conversions from more or 
+          less well-known tunes from the C64, Amiga or SNES. And some originals by myself (yay!)
         </p>
-        <p><a class="btn btn-secondary" target="_blank" href="https://rolandradio.net/artists-at-roland-radio/bsc-betasoft-cologne/" role="button">Go &raquo;</a></p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://rolandradio.net/artists/byname/BSC" role="button">Go &raquo;</a></p>
       </div>
 
     </div>
@@ -170,7 +183,7 @@
 </main>
 
 <footer class="container">
-  <p>&copy; BSC 1987-<span id="year">2019</span></p>
+  <p>&copy; BSC 1987-<span id="year">2019</span> - Here be no google, no facebook, no cookies, no beacons</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
