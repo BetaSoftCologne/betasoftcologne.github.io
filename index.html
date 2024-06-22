@@ -34,8 +34,21 @@
     background-color: #000080;
     color: #ffff00;
 }
+#outer {
+  width: 80cap;
+}
 .display-3 {
   padding: 0.1em;
+}
+@font-face {
+  font-family: "CPC";
+  src: url("amstrad_cpc464.ttf");
+}
+.cpc-font {
+  font-family: "CPC", "Bitstream Vera Serif", serif;
+}
+#cursor {
+  background-color: #ffff00;
 }
 </style>
 
@@ -47,20 +60,19 @@
       <div id="container">
           <canvas id="pic"></canvas>
       </div>
-      <h1 class="display-3">Welcome ..</h1>
-      <p>
+      <p class="cpc-font">Welcome ..</p>
+      <p class="cpc-font">
         .. to the world of BSC, stranger from the interwebs!
       </p>
-      <p>
-        This site is just a small collection of links to other sites covering music related
-        stuff that I have made over a period of almost 30 years. 
-        Most of the things also mostly relate to the 
-        Amstrad CPC, my 2nd home computer after the Speccy. The CPC was my main machine between 1985 and 1993 and I learnt things like reverse
-        engineering and breaking things (sometimes called cracking), programming in assembly language (sometimes 
-        called coding), making special computer music (sometimes called chiptunes) and much more. Ahhh, wonderful times!
+      <p class="cpc-font">
+        This site is just a small collection of links to other sites covering mostly music related stuff that I made in the last <span id="years">30</span> years.
+        Most of the things also mostly relate to the Amstrad CPC, my 2nd and most beloved home computer after the Speccy. 
+        The CPC was my main machine between 1985 and 1993 and I learnt things like reverse engineering and breaking things (sometimes called cracking), programming in assembly language (sometimes called coding), making special computer music (sometimes called chiptunes) and so much more. Ahhh, wonderful times!
       </p>
-      <p>
+      <p class="cpc-font">
         Ready
+        <br>
+        <span id="cursor">&nbsp;</span>
       </p>
       <!--
       <p><a class="btn btn-primary btn-lg" href="#" role="button">TODO wohin? &raquo;</a></p>
@@ -147,7 +159,7 @@
 </main>
 
 <footer class="container">
-  <p>&copy; BSC 1987-<span id="year">2019</span> - Here be no google, no facebook, no cookies, no beacons</p>
+  <p>&copy; BSC 1986-<span id="year">2019</span> - Here be no google, no facebook, no cookies, no beacons</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -156,7 +168,9 @@
 
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript">
-$("#year").text(1900 + new Date().getYear());
+const year = 1900 + new Date().getYear();
+$("#year").text(year);
+$("#years").text(year - 1986);
 </script>
 
 </html>
