@@ -1,3 +1,6 @@
+// Weltweite Variablen
+let bewegen = true;
+
 // Das Element auf dem gemalt werden wird
 const bild = document.getElementById("pic"); 
 const kontext = bild.getContext("2d");
@@ -37,24 +40,30 @@ function male_barren(zielbereich, farben, barren, f) {
   }
   push(t,x,y);
   y = parseInt(mitte + f * ablenkung * Math.sin(barren.x));
-  barren.x += barren.y;
+  if (bewegen) barren.x += barren.y;
   for (let x of t) {
     zielbereich[y++] = x;
   }
 }
 
-// Initialisierung der Barrenschwingungen
-const cpc_halbe = 0.0464 / 2;
-const nummer_der_barren = 5 + 3*zufall, 
-  schwingtempo = 0.05 + 0.02*zufall; 
-  dx = 0.4 + 0.3*zufall; 
-let ax = 1, schwingende_barren = [];
-for (let i=0;i<nummer_der_barren;i++) {
-  schwingende_barren.push({
-    x: ax, y: schwingtempo
-  });
-  ax += dx;
+let schwingende_barren = null;
+
+function initialisierung() {
+  // Initialisierung der Barrenschwingungen
+  const cpc_halbe = 0.0464 / 2;
+  const nummer_der_barren = 5 + 3*zufall, 
+    schwingtempo = 0.05 + 0.02*zufall; 
+    dx = 0.4 + 0.3*zufall; 
+  let ax = 1;
+  schwingende_barren = [];
+  for (let i=0;i<nummer_der_barren;i++) {
+    schwingende_barren.push({
+      x: ax, y: schwingtempo
+    });
+    ax += dx;
+  }
 }
+
 
 // Herstellung der Barrenfärbung
 const farbige_balken = [
@@ -76,6 +85,17 @@ function rendierung(ymax) {
   // Malung delegieren
   male_zwischenspeicher(farbtabelle, 1);
 }
+
+function starten() {
+  bewegen=true;
+}
+
+function anhalten() {
+  bewegen=false;
+}
+
+initialisierung();
+starten();
 
 // Starten der Animation
 window.setInterval(function() {
